@@ -56,31 +56,11 @@ Baris menunjukkan label sebenarnya dan kolom menunjukkan prediksi. NORMAL = 0, P
 
 ## Grad-CAM
 
-Visualisasi arsip menampilkan E7_T bersama E5 dan DenseNet121 pada contoh yang sama. Target NORMAL dan PNEUMONIA ditampilkan terpisah. Gunakan versi asli untuk melihat seluruh heatmap. Versi lung_mask membatasi tampilan heatmap dengan mask paru dan perlu dibaca sebagai tampilan tambahan, bukan bukti tersendiri bahwa seluruh atribusi asli berada di paru.
+Panel berikut membandingkan PneuNet E7_T, PneuNet E5 P3, DenseNet121-RSNA, RAD-DINO, dan DINOv3 ViT-L/16 pada citra input P3 yang sama. Baris TP, TN, FP, dan FN dipilih berdasarkan prediksi E7_T. Seluruh heatmap menggunakan target PNEUMONIA (+logit), termasuk pada citra dengan label asli NORMAL.
 
-### Target NORMAL
+![Perbandingan Grad-CAM target PNEUMONIA pada contoh TP, TN, FP, dan FN](outputs/tp_tn_fp_fn_target_1.png)
 
-![Grad-CAM target NORMAL pada citra asli](outputs/gradcam_target_0_original.png)
-
-<details>
-<summary>Tampilan dengan mask paru untuk target NORMAL</summary>
-
-![Grad-CAM target NORMAL dengan mask paru](outputs/gradcam_target_0_lung_mask.png)
-
-</details>
-
-### Target PNEUMONIA
-
-![Grad-CAM target PNEUMONIA pada citra asli](outputs/gradcam_target_1_original.png)
-
-<details>
-<summary>Tampilan dengan mask paru untuk target PNEUMONIA</summary>
-
-![Grad-CAM target PNEUMONIA dengan mask paru](outputs/gradcam_target_1_lung_mask.png)
-
-</details>
-
-[Daftar contoh](outputs/test_cases.csv) · [Rasio atribusi di area paru](outputs/gradcam_lung_attribution.csv) · [Array heatmap](outputs/gradcam_original_heatmaps.npz)
+[Buka gambar ukuran penuh](outputs/tp_tn_fp_fn_target_1.png)
 
 ## Benchmark klasifikasi dan latency
 
