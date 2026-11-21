@@ -1,0 +1,32 @@
+{
+  "prepared_utc": "2026-11-20T16:47:41.380409+00:00",
+  "repository": "E:\\AI Project\\Pneumonia\\PneuNet_E7_T_Repo",
+  "original_package_backup": "E:\\AI Project\\Pneumonia\\local_artifacts\\PneuNet_E7_T_original_20261120T164722Z",
+  "copied_files": 1346,
+  "copied_bytes": 348757421,
+  "excluded_files": 74,
+  "excluded_bytes": 582977191,
+  "copied_notebooks_identical": true,
+  "copied_artifact_hashes_verified": true,
+  "model_or_image_tensor_files_in_repository": 0,
+  "training_executed": false,
+  "pushed_to_github": false,
+  "project_directories": 123,
+  "project_readmes": 124,
+  "all_project_directories_have_readme": true,
+  "git_initialized": true,
+  "git_remote_configured": false,
+  "git_candidate_files": 1477,
+  "all_copied_artifacts_in_git_candidates": true,
+  "exclusion_rules_verified": true,
+  "markdown_broken_links": [],
+  "git_branch": "main",
+  "main_readme_sections_verified": [
+    "classification report",
+    "learning curve",
+    "confusion matrix",
+    "Grad-CAM NORMAL/PNEUMONIA",
+    "classification and latency benchmark"
+  ],
+  "notebook_json_validated": 5
+}

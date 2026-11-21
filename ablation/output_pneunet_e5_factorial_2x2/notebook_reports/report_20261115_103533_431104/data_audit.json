@@ -1,0 +1,27 @@
+{
+  "status": "PASS",
+  "conditions": [
+    "baseline",
+    "clahe_only",
+    "aug_only",
+    "clahe_aug"
+  ],
+  "samples_per_split": {
+    "train": 4646,
+    "val": 586,
+    "test": 624
+  },
+  "normalization": "float32 /255 all conditions",
+  "clahe_before_letterbox": true,
+  "augmentation_mode_probs": [
+    0.5,
+    0.25,
+    0.25
+  ],
+  "augmentation_static": true,
+  "augmentation_train_only": true,
+  "rotation_border": "BORDER_CONSTANT 0",
+  "gaussian_border": "BORDER_REPLICATE",
+  "same_transforms_C_and_D": true,
+  "dataset_fingerprint": "aa5086a7b1356909605745377b82eda4d867d74aa9c89095046c6531ec17999a"
+}

@@ -1,0 +1,347 @@
+[
+  {
+    "model": "PneuNet_E5_P3",
+    "batch": 32,
+    "precision": "float32",
+    "amp": false,
+    "tf32": false,
+    "full_training": false,
+    "checkpoint": "/home/arsyadmuhammad/AI Project/Pneumonia/output_pneunet_e5_segmentation_3level/runs/full/unet_resnet34__mask__P3__seed_42/best.pt",
+    "sha256": "18b5da5080189b819726a21ba3fe462b4937d797ecda416bfd3196bfe4485caf",
+    "retrained": false,
+    "parameters_total": 785192,
+    "parameters_trainable": 0,
+    "normalization_check": {
+      "status": "PASS",
+      "shape": [
+        2,
+        1,
+        224,
+        224
+      ],
+      "geometry_changed": false
+    },
+    "reference_probability_max_abs_error": 7.038879368259643e-09,
+    "peak_allocated_gib": 11.445620059967041,
+    "peak_reserved_gib": 12.65234375,
+    "free_gib": 26.88677978515625,
+    "status": "PASS",
+    "loss": 0.11208756268024445,
+    "optimizer_updates": 0,
+    "attribution_check": {
+      "method": "Grad-CAM",
+      "feature_shape": [
+        1,
+        128,
+        112,
+        112
+      ],
+      "zero_heatmap": false,
+      "target_class": 1,
+      "normalization": "per-image relative [0,1]"
+    },
+    "latency_batch1": {
+      "batch": 1,
+      "mean_ms_per_batch": 35.177481746673585,
+      "std_ms_per_batch": 37.679293472512086,
+      "mean_ms_per_image": 35.177481746673585,
+      "includes": "checkpoint normalization + model; excludes mask/CLAHE/disk read and host transfer"
+    },
+    "latency_batch32": {
+      "batch": 32,
+      "mean_ms_per_batch": 136.3599994659424,
+      "std_ms_per_batch": 48.932624819897626,
+      "mean_ms_per_image": 4.2612499833107,
+      "includes": "checkpoint normalization + model; excludes mask/CLAHE/disk read and host transfer"
+    },
+    "source_fingerprint": "1b2659478762a3b10383240e87ad8edbec2b94facec6f77cad242653bbbc2a46",
+    "hf_revisions": {
+      "RAD_DINO": "110cbc18d5133582e320b43d53bf5c44e410c936",
+      "DINOv3_ViTL16": "ea8dc2863c51be0a264bab82070e3e8836b02d51"
+    },
+    "memory_budget_gib": 40.0,
+    "gradient_checkpointing_requested": true,
+    "protocol_sha256": "e252b88a2ee0ea9debcc8e33f99ad23b69921a6a50e8df9e9cb55373f8864dea",
+    "protocol_logging_note": "Protocol identity attached after successful smoke; measured values unchanged."
+  },
+  {
+    "model": "DenseNet121_RSNA",
+    "batch": 32,
+    "precision": "float32",
+    "amp": false,
+    "tf32": false,
+    "full_training": false,
+    "weights_id": "densenet121-res224-rsna",
+    "weights_url": "https://github.com/mlmed/torchxrayvision/releases/download/v1/kaggle-densenet121-d121-tw-lr001-rot45-tr15-sc15-seed0-best.pt",
+    "binary_head": "new Linear(1024,1); original pathology classifier discarded",
+    "normalization": "(raw255/255*2-1)*1024",
+    "weights_sha256": "906a59f48cf09638b745d66848a6c6f9d741368c66244717a81207329d140268",
+    "parameters_total": 6948609,
+    "parameters_trainable": 6948609,
+    "normalization_check": {
+      "status": "PASS",
+      "shape": [
+        2,
+        1,
+        224,
+        224
+      ],
+      "geometry_changed": false
+    },
+    "unused_unmasked_pretraining_parameters": [],
+    "peak_allocated_gib": 4.007113456726074,
+    "peak_reserved_gib": 4.705078125,
+    "free_gib": 34.83404541015625,
+    "status": "PASS",
+    "loss": 0.9178861975669861,
+    "optimizer_updates": 1,
+    "attribution_check": {
+      "method": "Grad-CAM",
+      "feature_shape": [
+        1,
+        1024,
+        7,
+        7
+      ],
+      "zero_heatmap": false,
+      "target_class": 1,
+      "normalization": "per-image relative [0,1]"
+    },
+    "latency_batch1": {
+      "batch": 1,
+      "mean_ms_per_batch": 98.94232940673828,
+      "std_ms_per_batch": 31.487615954307138,
+      "mean_ms_per_image": 98.94232940673828,
+      "includes": "checkpoint normalization + model; excludes mask/CLAHE/disk read and host transfer"
+    },
+    "latency_batch32": {
+      "batch": 32,
+      "mean_ms_per_batch": 95.02461557388305,
+      "std_ms_per_batch": 26.00036712432472,
+      "mean_ms_per_image": 2.9695192366838454,
+      "includes": "checkpoint normalization + model; excludes mask/CLAHE/disk read and host transfer"
+    },
+    "source_fingerprint": "1b2659478762a3b10383240e87ad8edbec2b94facec6f77cad242653bbbc2a46",
+    "hf_revisions": {
+      "RAD_DINO": "110cbc18d5133582e320b43d53bf5c44e410c936",
+      "DINOv3_ViTL16": "ea8dc2863c51be0a264bab82070e3e8836b02d51"
+    },
+    "memory_budget_gib": 40.0,
+    "gradient_checkpointing_requested": true,
+    "protocol_sha256": "e252b88a2ee0ea9debcc8e33f99ad23b69921a6a50e8df9e9cb55373f8864dea",
+    "protocol_logging_note": "Protocol identity attached after successful smoke; measured values unchanged."
+  },
+  {
+    "model": "RAD_DINO",
+    "batch": 32,
+    "precision": "float32",
+    "amp": false,
+    "tf32": false,
+    "full_training": false,
+    "repo_id": "microsoft/rad-dino",
+    "revision": "110cbc18d5133582e320b43d53bf5c44e410c936",
+    "weights_sha256": "dbfb9f54459c38773505de64a6ab7807bdcb392610fe1e697166342e43fb91ae",
+    "processor": {
+      "crop_size": {
+        "height": 518,
+        "width": 518
+      },
+      "do_center_crop": true,
+      "do_convert_rgb": true,
+      "do_normalize": true,
+      "do_rescale": true,
+      "do_resize": true,
+      "image_mean": [
+        0.5307,
+        0.5307,
+        0.5307
+      ],
+      "image_processor_type": "BitImageProcessor",
+      "image_std": [
+        0.2583,
+        0.2583,
+        0.2583
+      ],
+      "resample": 3,
+      "rescale_factor": 0.00392156862745098,
+      "size": {
+        "shortest_edge": 518
+      }
+    },
+    "geometry_override": "do_resize=False; do_center_crop=False; fixed shared 224 letterbox",
+    "gradient_checkpointing": false,
+    "binary_head": "new CLS-token Linear(hidden_size,1)",
+    "patch_size": 14,
+    "patch_grid": [
+      16,
+      16
+    ],
+    "register_tokens": 0,
+    "parameters_total": 86581249,
+    "parameters_trainable": 86581249,
+    "normalization_check": {
+      "status": "PASS",
+      "shape": [
+        2,
+        3,
+        224,
+        224
+      ],
+      "geometry_changed": false
+    },
+    "unused_unmasked_pretraining_parameters": [
+      "backbone.embeddings.mask_token"
+    ],
+    "peak_allocated_gib": 5.671502590179443,
+    "peak_reserved_gib": 6.126953125,
+    "free_gib": 33.41217041015625,
+    "status": "PASS",
+    "loss": 0.8620744347572327,
+    "optimizer_updates": 1,
+    "attribution_check": {
+      "method": "positive patch gradient_x_activation at last-block norm1",
+      "token_shape": [
+        1,
+        257,
+        768
+      ],
+      "excluded_prefix_tokens": 1,
+      "patch_tokens": 256,
+      "patch_grid": [
+        16,
+        16
+      ],
+      "zero_heatmap": false,
+      "target_class": 1,
+      "normalization": "per-image relative [0,1]"
+    },
+    "latency_batch1": {
+      "batch": 1,
+      "mean_ms_per_batch": 55.64461431503296,
+      "std_ms_per_batch": 35.640783826742066,
+      "mean_ms_per_image": 55.64461431503296,
+      "includes": "checkpoint normalization + model; excludes mask/CLAHE/disk read and host transfer"
+    },
+    "latency_batch32": {
+      "batch": 32,
+      "mean_ms_per_batch": 218.3100372314453,
+      "std_ms_per_batch": 79.74605910280586,
+      "mean_ms_per_image": 6.822188663482666,
+      "includes": "checkpoint normalization + model; excludes mask/CLAHE/disk read and host transfer"
+    },
+    "source_fingerprint": "1b2659478762a3b10383240e87ad8edbec2b94facec6f77cad242653bbbc2a46",
+    "hf_revisions": {
+      "RAD_DINO": "110cbc18d5133582e320b43d53bf5c44e410c936",
+      "DINOv3_ViTL16": "ea8dc2863c51be0a264bab82070e3e8836b02d51"
+    },
+    "memory_budget_gib": 40.0,
+    "gradient_checkpointing_requested": true,
+    "protocol_sha256": "e252b88a2ee0ea9debcc8e33f99ad23b69921a6a50e8df9e9cb55373f8864dea",
+    "protocol_logging_note": "Protocol identity attached after successful smoke; measured values unchanged."
+  },
+  {
+    "model": "DINOv3_ViTL16",
+    "batch": 32,
+    "precision": "float32",
+    "amp": false,
+    "tf32": false,
+    "full_training": false,
+    "repo_id": "facebook/dinov3-vitl16-pretrain-lvd1689m",
+    "revision": "ea8dc2863c51be0a264bab82070e3e8836b02d51",
+    "weights_sha256": "dcb2e45127cccbf1601e5f42fef165eea275c8e5213197e8dcf3f48822718179",
+    "processor": {
+      "data_format": "channels_first",
+      "default_to_square": true,
+      "do_normalize": true,
+      "do_rescale": true,
+      "do_resize": true,
+      "image_mean": [
+        0.485,
+        0.456,
+        0.406
+      ],
+      "image_processor_type": "DINOv3ViTImageProcessor",
+      "image_std": [
+        0.229,
+        0.224,
+        0.225
+      ],
+      "resample": 2,
+      "rescale_factor": 0.00392156862745098,
+      "size": {
+        "height": 224,
+        "width": 224
+      }
+    },
+    "geometry_override": "do_resize=False; do_center_crop=False; fixed shared 224 letterbox",
+    "gradient_checkpointing": true,
+    "binary_head": "new CLS-token Linear(hidden_size,1)",
+    "patch_size": 16,
+    "patch_grid": [
+      14,
+      14
+    ],
+    "register_tokens": 4,
+    "parameters_total": 303130625,
+    "parameters_trainable": 303130625,
+    "normalization_check": {
+      "status": "PASS",
+      "shape": [
+        2,
+        3,
+        224,
+        224
+      ],
+      "geometry_changed": false
+    },
+    "unused_unmasked_pretraining_parameters": [
+      "backbone.embeddings.mask_token"
+    ],
+    "peak_allocated_gib": 4.6202802658081055,
+    "peak_reserved_gib": 4.708984375,
+    "free_gib": 34.83013916015625,
+    "status": "PASS",
+    "loss": 0.8622039556503296,
+    "optimizer_updates": 1,
+    "attribution_check": {
+      "method": "positive patch gradient_x_activation at last-block norm1",
+      "token_shape": [
+        1,
+        201,
+        1024
+      ],
+      "excluded_prefix_tokens": 5,
+      "patch_tokens": 196,
+      "patch_grid": [
+        14,
+        14
+      ],
+      "zero_heatmap": false,
+      "target_class": 1,
+      "normalization": "per-image relative [0,1]"
+    },
+    "latency_batch1": {
+      "batch": 1,
+      "mean_ms_per_batch": 169.1172332763672,
+      "std_ms_per_batch": 36.38614021501822,
+      "mean_ms_per_image": 169.1172332763672,
+      "includes": "checkpoint normalization + model; excludes mask/CLAHE/disk read and host transfer"
+    },
+    "latency_batch32": {
+      "batch": 32,
+      "mean_ms_per_batch": 507.92764739990236,
+      "std_ms_per_batch": 144.25524561771,
+      "mean_ms_per_image": 15.872738981246949,
+      "includes": "checkpoint normalization + model; excludes mask/CLAHE/disk read and host transfer"
+    },
+    "source_fingerprint": "1b2659478762a3b10383240e87ad8edbec2b94facec6f77cad242653bbbc2a46",
+    "hf_revisions": {
+      "RAD_DINO": "110cbc18d5133582e320b43d53bf5c44e410c936",
+      "DINOv3_ViTL16": "ea8dc2863c51be0a264bab82070e3e8836b02d51"
+    },
+    "memory_budget_gib": 40.0,
+    "gradient_checkpointing_requested": true,
+    "protocol_sha256": "e252b88a2ee0ea9debcc8e33f99ad23b69921a6a50e8df9e9cb55373f8864dea",
+    "protocol_logging_note": "Protocol identity attached after successful smoke; measured values unchanged."
+  }
+]

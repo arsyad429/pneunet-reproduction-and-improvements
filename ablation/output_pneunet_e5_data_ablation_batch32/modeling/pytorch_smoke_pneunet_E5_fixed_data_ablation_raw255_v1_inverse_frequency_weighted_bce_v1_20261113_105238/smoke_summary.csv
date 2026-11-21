@@ -1,0 +1,6 @@
+model,condition,mode,status,parameters,trainable_parameters,optimizer_updates,seconds,device,gpu,gpu_peak_allocated_mb,test_evaluated,checkpoint_reload_passed
+PneuNet,baseline,smoke,PASS,785192,785192,1,8.077083047945052,cuda:0,NVIDIA A100-SXM4-80GB,12053.60205078125,False,True
+PneuNet,normalization,smoke,PASS,785192,785192,1,6.0890048439614475,cuda:0,NVIDIA A100-SXM4-80GB,12053.60205078125,False,True
+PneuNet,clahe,smoke,PASS,785192,785192,1,5.8122653011232615,cuda:0,NVIDIA A100-SXM4-80GB,12053.60205078125,False,True
+PneuNet,rotation50,smoke,PASS,785192,785192,1,6.121887111105025,cuda:0,NVIDIA A100-SXM4-80GB,12053.60205078125,False,True
+PneuNet,gaussian50,smoke,PASS,785192,785192,1,5.850886608939618,cuda:0,NVIDIA A100-SXM4-80GB,12053.60205078125,False,True

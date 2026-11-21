@@ -1,0 +1,92 @@
+{
+  "model": "DenseNet121_RSNA",
+  "batch": 32,
+  "precision": "float32",
+  "amp": false,
+  "tf32": false,
+  "full_training": false,
+  "source_fingerprint": "1b2659478762a3b10383240e87ad8edbec2b94facec6f77cad242653bbbc2a46",
+  "hf_revisions": {
+    "RAD_DINO": "110cbc18d5133582e320b43d53bf5c44e410c936",
+    "DINOv3_ViTL16": "ea8dc2863c51be0a264bab82070e3e8836b02d51"
+  },
+  "memory_budget_gib": 40.0,
+  "gradient_checkpointing_requested": true,
+  "protocol_sha256": "e252b88a2ee0ea9debcc8e33f99ad23b69921a6a50e8df9e9cb55373f8864dea",
+  "weights_id": "densenet121-res224-rsna",
+  "weights_url": "https://github.com/mlmed/torchxrayvision/releases/download/v1/kaggle-densenet121-d121-tw-lr001-rot45-tr15-sc15-seed0-best.pt",
+  "binary_head": "new Linear(1024,1); original pathology classifier discarded",
+  "normalization": "(raw255/255*2-1)*1024",
+  "weights_sha256": "906a59f48cf09638b745d66848a6c6f9d741368c66244717a81207329d140268",
+  "parameters_total": 6948609,
+  "parameters_trainable": 6948609,
+  "normalization_check": {
+    "status": "PASS",
+    "shape": [
+      2,
+      1,
+      224,
+      224
+    ],
+    "geometry_changed": false
+  },
+  "unused_unmasked_pretraining_parameters": [],
+  "peak_allocated_gib": 4.007113456726074,
+  "peak_reserved_gib": 4.705078125,
+  "free_gib": 43.1715087890625,
+  "status": "PASS",
+  "loss": 0.9178861975669861,
+  "optimizer_updates": 1,
+  "attribution_checks": [
+    {
+      "method": "Grad-CAM",
+      "feature_shape": [
+        1,
+        1024,
+        7,
+        7
+      ],
+      "zero_heatmap": false,
+      "target_class": 0,
+      "normalization": "per-image relative [0,1]"
+    },
+    {
+      "method": "Grad-CAM",
+      "feature_shape": [
+        1,
+        1024,
+        7,
+        7
+      ],
+      "zero_heatmap": false,
+      "target_class": 1,
+      "normalization": "per-image relative [0,1]"
+    }
+  ],
+  "attribution_check": {
+    "method": "Grad-CAM",
+    "feature_shape": [
+      1,
+      1024,
+      7,
+      7
+    ],
+    "zero_heatmap": false,
+    "target_class": 1,
+    "normalization": "per-image relative [0,1]"
+  },
+  "latency_batch1": {
+    "batch": 1,
+    "mean_ms_per_batch": 79.14343199729919,
+    "std_ms_per_batch": 34.56666940742927,
+    "mean_ms_per_image": 79.14343199729919,
+    "includes": "checkpoint normalization + model; excludes mask/CLAHE/disk read and host transfer"
+  },
+  "latency_batch32": {
+    "batch": 32,
+    "mean_ms_per_batch": 77.40715951919556,
+    "std_ms_per_batch": 39.93979699526115,
+    "mean_ms_per_image": 2.4189737349748612,
+    "includes": "checkpoint normalization + model; excludes mask/CLAHE/disk read and host transfer"
+  }
+}

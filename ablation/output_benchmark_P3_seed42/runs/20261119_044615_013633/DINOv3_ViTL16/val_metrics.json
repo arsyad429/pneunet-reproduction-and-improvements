@@ -1,0 +1,15 @@
+{
+  "accuracy": 0.9266211604095563,
+  "macro_f1": 0.9107678469617936,
+  "roc_auc": 0.9883991778944964,
+  "pr_auc": 0.9962652167272398,
+  "samples": 586,
+  "threshold": 0.5,
+  "precision_normal": 0.7872340425531915,
+  "recall_normal": 0.9801324503311258,
+  "f1_normal": 0.8731563421828908,
+  "precision_pneumonia": 0.992462311557789,
+  "recall_pneumonia": 0.9080459770114943,
+  "f1_pneumonia": 0.9483793517406963,
+  "weighted_bce": 0.14766845686850694
+}

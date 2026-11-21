@@ -1,0 +1,57 @@
+{
+  "status": "COMPLETE",
+  "rows": [
+    {
+      "model": "DenseNet121_RSNA",
+      "split": "train",
+      "accuracy": 0.9593198450279811,
+      "macro_f1": 0.9492078516717997,
+      "roc_auc": 0.9963454171492316,
+      "pr_auc": 0.9987616591880255,
+      "samples": 4646,
+      "threshold": 0.5,
+      "precision_normal": 0.866909090909091,
+      "recall_normal": 0.994991652754591,
+      "f1_normal": 0.9265448892343567,
+      "precision_pneumonia": 0.9981656985631305,
+      "recall_pneumonia": 0.9469257540603249,
+      "f1_pneumonia": 0.9718708141092425,
+      "weighted_bce": 0.0943340126214949
+    },
+    {
+      "model": "DenseNet121_RSNA",
+      "split": "val",
+      "accuracy": 0.9351535836177475,
+      "macro_f1": 0.9189523643139996,
+      "roc_auc": 0.9857044987440055,
+      "pr_auc": 0.9950054139178826,
+      "samples": 586,
+      "threshold": 0.5,
+      "precision_normal": 0.8265895953757225,
+      "recall_normal": 0.9470198675496688,
+      "f1_normal": 0.8827160493827161,
+      "precision_pneumonia": 0.9806295399515739,
+      "recall_pneumonia": 0.9310344827586207,
+      "f1_pneumonia": 0.9551886792452831,
+      "weighted_bce": 0.16765239143127467
+    },
+    {
+      "model": "DenseNet121_RSNA",
+      "split": "test",
+      "accuracy": 0.9535256410256411,
+      "macro_f1": 0.9501222413018492,
+      "roc_auc": 0.9837058952443568,
+      "pr_auc": 0.989740852494507,
+      "samples": 624,
+      "threshold": 0.5,
+      "precision_normal": 0.9515418502202643,
+      "recall_normal": 0.9230769230769231,
+      "f1_normal": 0.9370932754880694,
+      "precision_pneumonia": 0.9546599496221663,
+      "recall_pneumonia": 0.9717948717948718,
+      "f1_pneumonia": 0.963151207115629,
+      "weighted_bce": 0.20920727172723183
+    }
+  ],
+  "checkpoint_sha256": "3320ee82fdc87d56191fd2d13f4624353f1bd313457c5f8896f4bfa7b24981ec"
+}

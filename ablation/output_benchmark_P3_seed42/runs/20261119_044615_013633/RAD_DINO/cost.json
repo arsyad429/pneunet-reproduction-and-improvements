@@ -1,0 +1,63 @@
+{
+  "model": "RAD_DINO",
+  "repo_id": "microsoft/rad-dino",
+  "revision": "110cbc18d5133582e320b43d53bf5c44e410c936",
+  "weights_sha256": "dbfb9f54459c38773505de64a6ab7807bdcb392610fe1e697166342e43fb91ae",
+  "processor": {
+    "crop_size": {
+      "height": 518,
+      "width": 518
+    },
+    "do_center_crop": true,
+    "do_convert_rgb": true,
+    "do_normalize": true,
+    "do_rescale": true,
+    "do_resize": true,
+    "image_mean": [
+      0.5307,
+      0.5307,
+      0.5307
+    ],
+    "image_processor_type": "BitImageProcessor",
+    "image_std": [
+      0.2583,
+      0.2583,
+      0.2583
+    ],
+    "resample": 3,
+    "rescale_factor": 0.00392156862745098,
+    "size": {
+      "shortest_edge": 518
+    }
+  },
+  "geometry_override": "do_resize=False; do_center_crop=False; fixed shared 224 letterbox",
+  "gradient_checkpointing": false,
+  "binary_head": "new CLS-token Linear(hidden_size,1)",
+  "patch_size": 14,
+  "patch_grid": [
+    16,
+    16
+  ],
+  "register_tokens": 0,
+  "parameters_total": 86581249,
+  "parameters_trainable": 86581249,
+  "evaluation_peak": {
+    "peak_allocated_gib": 0.6924314498901367,
+    "peak_reserved_gib": 0.869140625,
+    "free_gib": 47.4293212890625
+  },
+  "latency_batch1": {
+    "batch": 1,
+    "mean_ms_per_batch": 70.3396384716034,
+    "std_ms_per_batch": 45.57637828658523,
+    "mean_ms_per_image": 70.3396384716034,
+    "includes": "checkpoint normalization + model; excludes mask/CLAHE/disk read and host transfer"
+  },
+  "latency_batch32": {
+    "batch": 32,
+    "mean_ms_per_batch": 163.42479248046874,
+    "std_ms_per_batch": 49.03534624134771,
+    "mean_ms_per_image": 5.107024765014648,
+    "includes": "checkpoint normalization + model; excludes mask/CLAHE/disk read and host transfer"
+  }
+}

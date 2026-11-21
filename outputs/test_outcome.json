@@ -1,0 +1,7 @@
+{
+  "test_macro_f1_above_target": true,
+  "parameters_within_1_5m": true,
+  "fp_lower_than_e5": true,
+  "pneumonia_recall_within_2pp_of_e5": true,
+  "independent_test_holdout": false
+}

@@ -1,0 +1,60 @@
+{
+  "model": "DINOv3_ViTL16",
+  "repo_id": "facebook/dinov3-vitl16-pretrain-lvd1689m",
+  "revision": "ea8dc2863c51be0a264bab82070e3e8836b02d51",
+  "weights_sha256": "dcb2e45127cccbf1601e5f42fef165eea275c8e5213197e8dcf3f48822718179",
+  "processor": {
+    "data_format": "channels_first",
+    "default_to_square": true,
+    "do_normalize": true,
+    "do_rescale": true,
+    "do_resize": true,
+    "image_mean": [
+      0.485,
+      0.456,
+      0.406
+    ],
+    "image_processor_type": "DINOv3ViTImageProcessor",
+    "image_std": [
+      0.229,
+      0.224,
+      0.225
+    ],
+    "resample": 2,
+    "rescale_factor": 0.00392156862745098,
+    "size": {
+      "height": 224,
+      "width": 224
+    }
+  },
+  "geometry_override": "do_resize=False; do_center_crop=False; fixed shared 224 letterbox",
+  "gradient_checkpointing": true,
+  "binary_head": "new CLS-token Linear(hidden_size,1)",
+  "patch_size": 16,
+  "patch_grid": [
+    14,
+    14
+  ],
+  "register_tokens": 4,
+  "parameters_total": 303130625,
+  "parameters_trainable": 303130625,
+  "evaluation_peak": {
+    "peak_allocated_gib": 1.5146021842956543,
+    "peak_reserved_gib": 1.673828125,
+    "free_gib": 46.6246337890625
+  },
+  "latency_batch1": {
+    "batch": 1,
+    "mean_ms_per_batch": 155.79138107299804,
+    "std_ms_per_batch": 47.37329282689025,
+    "mean_ms_per_image": 155.79138107299804,
+    "includes": "checkpoint normalization + model; excludes mask/CLAHE/disk read and host transfer"
+  },
+  "latency_batch32": {
+    "batch": 32,
+    "mean_ms_per_batch": 412.154231262207,
+    "std_ms_per_batch": 95.24956785644599,
+    "mean_ms_per_image": 12.87981972694397,
+    "includes": "checkpoint normalization + model; excludes mask/CLAHE/disk read and host transfer"
+  }
+}

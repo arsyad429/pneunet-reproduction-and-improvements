@@ -1,0 +1,5 @@
+analysis,condition,test_samples,raw_correct,condition_correct,raw_correct_to_wrong,raw_wrong_to_correct,both_correct,both_wrong,lost_pct_of_all_test,lost_pct_of_raw_correct,accuracy_delta,lost_NORMAL,lost_PNEUMONIA
+independently_trained_conditions_clean_test,normalization,624,551,572,19,40,532,33,3.0448717948717947,3.4482758620689653,0.03365384615384615,18,1
+independently_trained_conditions_clean_test,clahe,624,551,579,9,37,542,36,1.4423076923076923,1.633393829401089,0.04487179487179487,5,4
+independently_trained_conditions_clean_test,rotation50,624,551,571,22,42,529,31,3.5256410256410255,3.9927404718693285,0.03205128205128205,20,2
+independently_trained_conditions_clean_test,gaussian50,624,551,573,27,49,524,24,4.326923076923077,4.900181488203267,0.035256410256410256,8,19

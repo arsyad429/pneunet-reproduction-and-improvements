@@ -1,0 +1,39 @@
+{
+  "model": "PneuNet",
+  "config": {
+    "use_class_weighting": true,
+    "loss_version": "inverse_frequency_weighted_bce_v1",
+    "seed": 42,
+    "image_size": 224,
+    "batch_size": 32,
+    "epochs": 50,
+    "learning_rate": 0.001,
+    "beta_1": 0.9,
+    "beta_2": 0.999,
+    "epsilon": 1e-07,
+    "dropout": 0.3,
+    "l2": 0.001,
+    "early_stopping_patience": 7,
+    "bn_eps": 0.001,
+    "bn_momentum": 0.01,
+    "threshold": 0.5,
+    "initial_weights": null,
+    "class_counts": [
+      1198,
+      3448
+    ],
+    "class_weights": [
+      1.9390651085141903,
+      0.673723897911833
+    ],
+    "class_weight_source": "complete_training_split_only",
+    "class_weighting": "inverse_frequency_balanced",
+    "loss_reduction": "mean_over_samples"
+  },
+  "parameters": {
+    "parameters": 785192,
+    "trainable_parameters": 785192,
+    "bn_running_statistics": 2560,
+    "keras_comparable_total": 787752
+  }
+}

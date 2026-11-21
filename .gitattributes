@@ -1,0 +1,10 @@
+* text=auto
+*.ipynb -text
+*.png binary
+*.npz binary
+data/p3_cache_manifest.json -text
+
+# Preserve archived artifacts and their recorded byte checksums across platforms.
+ablation/** -text
+outputs/** -text
+data/** -text

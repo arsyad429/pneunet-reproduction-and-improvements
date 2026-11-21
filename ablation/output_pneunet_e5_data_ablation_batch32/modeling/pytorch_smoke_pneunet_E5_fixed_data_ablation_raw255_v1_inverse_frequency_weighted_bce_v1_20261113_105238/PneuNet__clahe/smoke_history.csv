@@ -1,0 +1,2 @@
+epoch,loss,accuracy,roc_auc,val_loss,val_accuracy,val_roc_auc
+0,2.795682191848755,0.375,0.4609375,2.3645604848861694,0.5,0.08203125

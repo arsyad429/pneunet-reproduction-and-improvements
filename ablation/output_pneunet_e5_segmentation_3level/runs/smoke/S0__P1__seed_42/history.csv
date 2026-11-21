@@ -1,0 +1,2 @@
+epoch,train_loss,val_loss,val_macro_f1,val_recall_normal,val_recall_pneumonia
+1,2.549738883972168,2.169498920440674,0.3333333333333333,1.0,0.0

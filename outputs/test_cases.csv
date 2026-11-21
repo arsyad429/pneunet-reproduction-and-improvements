@@ -1,0 +1,9 @@
+source_index,source_path,y_true,probability,prediction,error_type
+5246,Datasets/chest_xray/test/NORMAL/NORMAL-1608079-0001.jpeg,0,0.9923505,1,FP
+5407,Datasets/chest_xray/test/NORMAL/NORMAL-7165123-0001.jpeg,0,0.847448,1,FP
+5343,Datasets/chest_xray/test/NORMAL/NORMAL-5356114-0001.jpeg,0,0.8063655,1,FP
+5602,Datasets/chest_xray/test/PNEUMONIA/BACTERIA-5757955-0001.jpeg,1,0.016409488,0,FN
+5651,Datasets/chest_xray/test/PNEUMONIA/BACTERIA-821920-0002.jpeg,1,0.09679634,0,FN
+5694,Datasets/chest_xray/test/PNEUMONIA/BACTERIA-9364007-0003.jpeg,1,0.14653961,0,FN
+5411,Datasets/chest_xray/test/NORMAL/NORMAL-7331861-0001.jpeg,0,0.0003026059,0,TN
+5687,Datasets/chest_xray/test/PNEUMONIA/BACTERIA-9242636-0005.jpeg,1,0.9999914,1,TP

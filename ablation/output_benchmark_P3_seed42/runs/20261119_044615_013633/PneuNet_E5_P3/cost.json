@@ -1,0 +1,27 @@
+{
+  "model": "PneuNet_E5_P3",
+  "checkpoint": "/home/arsyadmuhammad/AI Project/Pneumonia/output_pneunet_e5_segmentation_3level/runs/full/unet_resnet34__mask__P3__seed_42/best.pt",
+  "sha256": "18b5da5080189b819726a21ba3fe462b4937d797ecda416bfd3196bfe4485caf",
+  "retrained": false,
+  "parameters_total": 785192,
+  "parameters_trainable": 0,
+  "evaluation_peak": {
+    "peak_allocated_gib": 2.5675573348999023,
+    "peak_reserved_gib": 3.009765625,
+    "free_gib": 45.2886962890625
+  },
+  "latency_batch1": {
+    "batch": 1,
+    "mean_ms_per_batch": 28.218434882164,
+    "std_ms_per_batch": 34.83009454742997,
+    "mean_ms_per_image": 28.218434882164,
+    "includes": "checkpoint normalization + model; excludes mask/CLAHE/disk read and host transfer"
+  },
+  "latency_batch32": {
+    "batch": 32,
+    "mean_ms_per_batch": 120.38499298095704,
+    "std_ms_per_batch": 49.098502673774526,
+    "mean_ms_per_image": 3.7620310306549074,
+    "includes": "checkpoint normalization + model; excludes mask/CLAHE/disk read and host transfer"
+  }
+}

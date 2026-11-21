@@ -1,0 +1,132 @@
+{
+  "version": 1,
+  "completed_run": "/home/arsyadmuhammad/AI Project/Pneumonia/output_benchmark_P3_seed42/runs/20261119_044615_013633",
+  "protocol_sha256": "e252b88a2ee0ea9debcc8e33f99ad23b69921a6a50e8df9e9cb55373f8864dea",
+  "batch": 32,
+  "precision": "float32",
+  "amp": false,
+  "tf32": false,
+  "gpu": "NVIDIA A100-SXM4-80GB",
+  "records": [
+    {
+      "model": "PneuNet_E5_P3",
+      "checkpoint": "/home/arsyadmuhammad/AI Project/Pneumonia/output_pneunet_e5_segmentation_3level/runs/full/unet_resnet34__mask__P3__seed_42/best.pt",
+      "checkpoint_sha256": "18b5da5080189b819726a21ba3fe462b4937d797ecda416bfd3196bfe4485caf",
+      "inference": {
+        "peak_allocated_gib": 2.536304473876953,
+        "peak_reserved_gib": 3.138671875,
+        "free_gib": 44.63482666015625
+      },
+      "optimizer": {
+        "type": "Adam",
+        "lr": 0.001,
+        "betas": [
+          0.9,
+          0.999
+        ],
+        "eps": 1e-07,
+        "weight_decay": 0,
+        "foreach": null
+      },
+      "trainable_parameters_in_step": 785192,
+      "training_step": {
+        "peak_allocated_gib": 11.769142150878906,
+        "peak_reserved_gib": 13.84375,
+        "free_gib": 33.89459228515625
+      },
+      "status": "PASS",
+      "optimizer_updates": 1,
+      "loss": 0.20931994915008545
+    },
+    {
+      "model": "DenseNet121_RSNA",
+      "checkpoint": "/home/arsyadmuhammad/AI Project/Pneumonia/output_benchmark_P3_seed42/runs/20261119_044615_013633/DenseNet121_RSNA/best.pt",
+      "checkpoint_sha256": "3320ee82fdc87d56191fd2d13f4624353f1bd313457c5f8896f4bfa7b24981ec",
+      "inference": {
+        "peak_allocated_gib": 0.34101343154907227,
+        "peak_reserved_gib": 0.412109375,
+        "free_gib": 47.32623291015625
+      },
+      "optimizer": {
+        "type": "Adam",
+        "lr": 0.0001,
+        "betas": [
+          0.9,
+          0.999
+        ],
+        "eps": 1e-07,
+        "weight_decay": 0.0,
+        "foreach": false
+      },
+      "trainable_parameters_in_step": 6948609,
+      "training_step": {
+        "peak_allocated_gib": 4.014761924743652,
+        "peak_reserved_gib": 4.724609375,
+        "free_gib": 43.01373291015625
+      },
+      "status": "PASS",
+      "optimizer_updates": 1,
+      "loss": 0.32662156224250793
+    },
+    {
+      "model": "RAD_DINO",
+      "checkpoint": "/home/arsyadmuhammad/AI Project/Pneumonia/output_benchmark_P3_seed42/runs/20261119_044615_013633/RAD_DINO/best.pt",
+      "checkpoint_sha256": "3076fe46b11d255337ba1eba3998fe7289a2f838dc15c939f9b2a291be702e8c",
+      "inference": {
+        "peak_allocated_gib": 0.6913166046142578,
+        "peak_reserved_gib": 0.8515625,
+        "free_gib": 46.88677978515625
+      },
+      "optimizer": {
+        "type": "Adam",
+        "lr": 0.0001,
+        "betas": [
+          0.9,
+          0.999
+        ],
+        "eps": 1e-07,
+        "weight_decay": 0.0,
+        "foreach": false
+      },
+      "trainable_parameters_in_step": 86581249,
+      "training_step": {
+        "peak_allocated_gib": 5.671367168426514,
+        "peak_reserved_gib": 6.158203125,
+        "free_gib": 41.58013916015625
+      },
+      "status": "PASS",
+      "optimizer_updates": 1,
+      "loss": 0.10376298427581787
+    },
+    {
+      "model": "DINOv3_ViTL16",
+      "checkpoint": "/home/arsyadmuhammad/AI Project/Pneumonia/output_benchmark_P3_seed42/runs/20261119_044615_013633/DINOv3_ViTL16/best.pt",
+      "checkpoint_sha256": "23c24fb016f9edcd55923dc2814d66a895bae5c440b0b924bdd01bc370266fb0",
+      "inference": {
+        "peak_allocated_gib": 1.513624668121338,
+        "peak_reserved_gib": 1.68359375,
+        "free_gib": 46.05279541015625
+      },
+      "optimizer": {
+        "type": "Adam",
+        "lr": 0.0001,
+        "betas": [
+          0.9,
+          0.999
+        ],
+        "eps": 1e-07,
+        "weight_decay": 0.0,
+        "foreach": false
+      },
+      "trainable_parameters_in_step": 303130625,
+      "training_step": {
+        "peak_allocated_gib": 4.6190595626831055,
+        "peak_reserved_gib": 4.705078125,
+        "free_gib": 43.03131103515625
+      },
+      "status": "PASS",
+      "optimizer_updates": 1,
+      "loss": 0.03947855532169342
+    }
+  ]
+}

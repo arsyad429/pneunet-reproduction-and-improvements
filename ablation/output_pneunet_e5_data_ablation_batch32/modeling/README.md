@@ -1,0 +1,11 @@
+# modeling
+
+Kumpulan run historis. Nama direktori dan metadata menunjukkan mode, timestamp, model, kondisi dan seed. Bandingkan metrik dari konfigurasi serta split yang sebanding.
+
+[Kembali ke folder induk](../README.md)
+
+## Isi folder
+
+- [pytorch_full_pneunet_E5_fixed_data_ablation_raw255_v1_inverse_frequency_weighted_bce_v1_20261113_110704](pytorch_full_pneunet_E5_fixed_data_ablation_raw255_v1_inverse_frequency_weighted_bce_v1_20261113_110704/) untuk subfolder hasil.
+- [pytorch_full_pneunet_E5_fixed_data_ablation_raw255_v1_inverse_frequency_weighted_bce_v1_20261114_035921](pytorch_full_pneunet_E5_fixed_data_ablation_raw255_v1_inverse_frequency_weighted_bce_v1_20261114_035921/) untuk subfolder hasil.
+- [pytorch_smoke_pneunet_E5_fixed_data_ablation_raw255_v1_inverse_frequency_weighted_bce_v1_20261113_105238](pytorch_smoke_pneunet_E5_fixed_data_ablation_raw255_v1_inverse_frequency_weighted_bce_v1_20261113_105238/) untuk subfolder hasil.

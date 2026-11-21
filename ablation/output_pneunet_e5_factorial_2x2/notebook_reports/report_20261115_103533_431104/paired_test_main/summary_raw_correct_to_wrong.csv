@@ -1,0 +1,4 @@
+analysis,condition,test_samples,raw_correct,condition_correct,raw_correct_to_wrong,raw_wrong_to_correct,both_correct,both_wrong,lost_pct_of_all_test,lost_pct_of_raw_correct,accuracy_delta,lost_NORMAL,lost_PNEUMONIA
+independently_trained_factorial_conditions,clahe_only,624,572,496,87,11,485,41,13.942307692307692,15.20979020979021,-0.12179487179487179,82,5
+independently_trained_factorial_conditions,aug_only,624,572,549,34,11,538,41,5.448717948717949,5.944055944055944,-0.03685897435897436,31,3
+independently_trained_factorial_conditions,clahe_aug,624,572,532,68,28,504,24,10.897435897435898,11.888111888111888,-0.0641025641025641,18,50

@@ -1,0 +1,140 @@
+{
+  "model": "DINOv3_ViTL16",
+  "batch": 32,
+  "precision": "float32",
+  "amp": false,
+  "tf32": false,
+  "full_training": false,
+  "source_fingerprint": "1b2659478762a3b10383240e87ad8edbec2b94facec6f77cad242653bbbc2a46",
+  "hf_revisions": {
+    "RAD_DINO": "110cbc18d5133582e320b43d53bf5c44e410c936",
+    "DINOv3_ViTL16": "ea8dc2863c51be0a264bab82070e3e8836b02d51"
+  },
+  "memory_budget_gib": 40.0,
+  "gradient_checkpointing_requested": true,
+  "protocol_sha256": "e252b88a2ee0ea9debcc8e33f99ad23b69921a6a50e8df9e9cb55373f8864dea",
+  "repo_id": "facebook/dinov3-vitl16-pretrain-lvd1689m",
+  "revision": "ea8dc2863c51be0a264bab82070e3e8836b02d51",
+  "weights_sha256": "dcb2e45127cccbf1601e5f42fef165eea275c8e5213197e8dcf3f48822718179",
+  "processor": {
+    "data_format": "channels_first",
+    "default_to_square": true,
+    "do_normalize": true,
+    "do_rescale": true,
+    "do_resize": true,
+    "image_mean": [
+      0.485,
+      0.456,
+      0.406
+    ],
+    "image_processor_type": "DINOv3ViTImageProcessor",
+    "image_std": [
+      0.229,
+      0.224,
+      0.225
+    ],
+    "resample": 2,
+    "rescale_factor": 0.00392156862745098,
+    "size": {
+      "height": 224,
+      "width": 224
+    }
+  },
+  "geometry_override": "do_resize=False; do_center_crop=False; fixed shared 224 letterbox",
+  "gradient_checkpointing": true,
+  "binary_head": "new CLS-token Linear(hidden_size,1)",
+  "patch_size": 16,
+  "patch_grid": [
+    14,
+    14
+  ],
+  "register_tokens": 4,
+  "parameters_total": 303130625,
+  "parameters_trainable": 303130625,
+  "normalization_check": {
+    "status": "PASS",
+    "shape": [
+      2,
+      3,
+      224,
+      224
+    ],
+    "geometry_changed": false
+  },
+  "unused_unmasked_pretraining_parameters": [
+    "backbone.embeddings.mask_token"
+  ],
+  "peak_allocated_gib": 4.6202802658081055,
+  "peak_reserved_gib": 4.708984375,
+  "free_gib": 43.1636962890625,
+  "status": "PASS",
+  "loss": 0.8622039556503296,
+  "optimizer_updates": 1,
+  "attribution_checks": [
+    {
+      "method": "positive patch gradient_x_activation at last-block norm1",
+      "token_shape": [
+        1,
+        201,
+        1024
+      ],
+      "excluded_prefix_tokens": 5,
+      "patch_tokens": 196,
+      "patch_grid": [
+        14,
+        14
+      ],
+      "zero_heatmap": false,
+      "target_class": 0,
+      "normalization": "per-image relative [0,1]"
+    },
+    {
+      "method": "positive patch gradient_x_activation at last-block norm1",
+      "token_shape": [
+        1,
+        201,
+        1024
+      ],
+      "excluded_prefix_tokens": 5,
+      "patch_tokens": 196,
+      "patch_grid": [
+        14,
+        14
+      ],
+      "zero_heatmap": false,
+      "target_class": 1,
+      "normalization": "per-image relative [0,1]"
+    }
+  ],
+  "attribution_check": {
+    "method": "positive patch gradient_x_activation at last-block norm1",
+    "token_shape": [
+      1,
+      201,
+      1024
+    ],
+    "excluded_prefix_tokens": 5,
+    "patch_tokens": 196,
+    "patch_grid": [
+      14,
+      14
+    ],
+    "zero_heatmap": false,
+    "target_class": 1,
+    "normalization": "per-image relative [0,1]"
+  },
+  "latency_batch1": {
+    "batch": 1,
+    "mean_ms_per_batch": 176.35305824279786,
+    "std_ms_per_batch": 54.720490970832834,
+    "mean_ms_per_image": 176.35305824279786,
+    "includes": "checkpoint normalization + model; excludes mask/CLAHE/disk read and host transfer"
+  },
+  "latency_batch32": {
+    "batch": 32,
+    "mean_ms_per_batch": 379.66148529052737,
+    "std_ms_per_batch": 57.92877074016025,
+    "mean_ms_per_image": 11.86442141532898,
+    "includes": "checkpoint normalization + model; excludes mask/CLAHE/disk read and host transfer"
+  }
+}

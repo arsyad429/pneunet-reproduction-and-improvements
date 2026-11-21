@@ -1,0 +1,57 @@
+{
+  "status": "COMPLETE",
+  "rows": [
+    {
+      "model": "PneuNet_E5_P3",
+      "split": "train",
+      "accuracy": 0.9442531209642704,
+      "macro_f1": 0.9290436692127819,
+      "roc_auc": 0.9844912634747008,
+      "pr_auc": 0.994681161430834,
+      "samples": 4646,
+      "threshold": 0.5,
+      "precision_normal": 0.8619892058596762,
+      "recall_normal": 0.9332220367278798,
+      "f1_normal": 0.8961923847695391,
+      "precision_pneumonia": 0.9761122723200956,
+      "recall_pneumonia": 0.9480858468677494,
+      "f1_pneumonia": 0.9618949536560247,
+      "weighted_bce": 0.16027914511831257
+    },
+    {
+      "model": "PneuNet_E5_P3",
+      "split": "val",
+      "accuracy": 0.931740614334471,
+      "macro_f1": 0.9140258215962441,
+      "roc_auc": 0.9837710283930883,
+      "pr_auc": 0.994591518474758,
+      "samples": 586,
+      "threshold": 0.5,
+      "precision_normal": 0.8284023668639053,
+      "recall_normal": 0.9271523178807947,
+      "f1_normal": 0.875,
+      "precision_pneumonia": 0.973621103117506,
+      "recall_pneumonia": 0.9333333333333333,
+      "f1_pneumonia": 0.9530516431924883,
+      "weighted_bce": 0.16860585499542158
+    },
+    {
+      "model": "PneuNet_E5_P3",
+      "split": "test",
+      "accuracy": 0.9391025641025641,
+      "macro_f1": 0.9340952550362431,
+      "roc_auc": 0.9797282489590182,
+      "pr_auc": 0.9871276336085852,
+      "samples": 624,
+      "threshold": 0.5,
+      "precision_normal": 0.9495412844036697,
+      "recall_normal": 0.8846153846153846,
+      "f1_normal": 0.915929203539823,
+      "precision_pneumonia": 0.9334975369458128,
+      "recall_pneumonia": 0.9717948717948718,
+      "f1_pneumonia": 0.9522613065326633,
+      "weighted_bce": 0.25865640768255943
+    }
+  ],
+  "checkpoint_sha256": "18b5da5080189b819726a21ba3fe462b4937d797ecda416bfd3196bfe4485caf"
+}

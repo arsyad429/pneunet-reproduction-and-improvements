@@ -1,0 +1,22 @@
+{
+  "model": "DenseNet121_RSNA",
+  "status": "TRAINED",
+  "seed": 42,
+  "metadata": {
+    "weights_id": "densenet121-res224-rsna",
+    "weights_url": "https://github.com/mlmed/torchxrayvision/releases/download/v1/kaggle-densenet121-d121-tw-lr001-rot45-tr15-sc15-seed0-best.pt",
+    "binary_head": "new Linear(1024,1); original pathology classifier discarded",
+    "normalization": "(raw255/255*2-1)*1024",
+    "weights_sha256": "906a59f48cf09638b745d66848a6c6f9d741368c66244717a81207329d140268",
+    "parameters_total": 6948609,
+    "parameters_trainable": 6948609
+  },
+  "updates": 2044,
+  "epochs": 14,
+  "training_seconds": 1638.5065936557949,
+  "resumed_after_epoch": 0,
+  "protocol_sha256": "e252b88a2ee0ea9debcc8e33f99ad23b69921a6a50e8df9e9cb55373f8864dea",
+  "peak_allocated_gib": 4.066119194030762,
+  "peak_reserved_gib": 4.75390625,
+  "free_gib": 43.5445556640625
+}

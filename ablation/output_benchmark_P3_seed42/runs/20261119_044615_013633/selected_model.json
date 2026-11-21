@@ -1,0 +1,11 @@
+{
+  "model": "DenseNet121_RSNA",
+  "selected_by": "validation Macro-F1",
+  "test_used_for_selection": false,
+  "checkpoint_sha256": {
+    "PneuNet_E5_P3": "18b5da5080189b819726a21ba3fe462b4937d797ecda416bfd3196bfe4485caf",
+    "DenseNet121_RSNA": "3320ee82fdc87d56191fd2d13f4624353f1bd313457c5f8896f4bfa7b24981ec",
+    "RAD_DINO": "3076fe46b11d255337ba1eba3998fe7289a2f838dc15c939f9b2a291be702e8c",
+    "DINOv3_ViTL16": "23c24fb016f9edcd55923dc2814d66a895bae5c440b0b924bdd01bc370266fb0"
+  }
+}

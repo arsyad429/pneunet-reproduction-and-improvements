@@ -1,0 +1,21 @@
+{
+  "accuracy": 0.9248816185966423,
+  "precision_pneumonia": 0.9911251980982567,
+  "recall_pneumonia": 0.9069025522041764,
+  "f1_pneumonia": 0.9471452370134787,
+  "precision_normal": 0.7847082494969819,
+  "recall_normal": 0.9766277128547579,
+  "f1_normal": 0.8702119747117888,
+  "macro_f1": 0.9086786058626337,
+  "roc_auc": 0.9852545716178163,
+  "pr_auc": 0.994977505530741,
+  "samples": 4646,
+  "threshold": 0.5,
+  "loss": 0.33625140991438784,
+  "kernel_l2": 0.17316864430904388,
+  "weighted_bce": 0.16308276560534396,
+  "fp_normal": 28,
+  "fn_pneumonia": 321,
+  "tn_normal": 1170,
+  "tp_pneumonia": 3127
+}

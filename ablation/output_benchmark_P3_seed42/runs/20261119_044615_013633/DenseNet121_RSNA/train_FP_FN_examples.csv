@@ -1,0 +1,7 @@
+source_index,source_path,y_true,probability,prediction,error_type,confidence
+1254,/home/arsyadmuhammad/AI Project/Pneumonia/Datasets/chest_xray/train/PNEUMONIA/BACTERIA-1157929-0001.jpeg,1,0.011300358,0,FN,0.9886996
+3535,/home/arsyadmuhammad/AI Project/Pneumonia/Datasets/chest_xray/train/PNEUMONIA/VIRUS-1632190-0002.jpeg,1,0.011916386,0,FN,0.9880836
+3561,/home/arsyadmuhammad/AI Project/Pneumonia/Datasets/chest_xray/train/PNEUMONIA/VIRUS-1801584-0006.jpeg,1,0.015928514,0,FN,0.9840715
+923,/home/arsyadmuhammad/AI Project/Pneumonia/Datasets/chest_xray/train/NORMAL/NORMAL-7920733-0001.jpeg,0,0.9716413,1,FP,0.9716413
+474,/home/arsyadmuhammad/AI Project/Pneumonia/Datasets/chest_xray/train/NORMAL/NORMAL-4521403-0001.jpeg,0,0.9507401,1,FP,0.9507401
+437,/home/arsyadmuhammad/AI Project/Pneumonia/Datasets/chest_xray/train/NORMAL/NORMAL-4212770-0001.jpeg,0,0.7644587,1,FP,0.7644587

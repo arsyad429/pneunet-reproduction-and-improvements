@@ -1,0 +1,64 @@
+{
+  "seeds": [
+    42,
+    123,
+    3407
+  ],
+  "pipelines": {
+    "P1": {
+      "label": "Normalisasi /255",
+      "clahe": false,
+      "augment": false,
+      "normalize": true
+    },
+    "P2": {
+      "label": "CLAHE, tanpa /255",
+      "clahe": true,
+      "augment": false,
+      "normalize": false
+    },
+    "P3": {
+      "label": "CLAHE + Aug, tanpa /255",
+      "clahe": true,
+      "augment": true,
+      "normalize": false
+    },
+    "P4": {
+      "label": "Hard mask + /255 + Aug, tanpa CLAHE",
+      "clahe": false,
+      "augment": true,
+      "normalize": true
+    }
+  },
+  "train_config": {
+    "seed": 42,
+    "image_size": 224,
+    "batch_size": 32,
+    "epochs": 50,
+    "learning_rate": 0.001,
+    "beta_1": 0.9,
+    "beta_2": 0.999,
+    "epsilon": 1e-07,
+    "dropout": 0.3,
+    "l2": 0.001,
+    "early_stopping_patience": 7,
+    "bn_eps": 0.001,
+    "bn_momentum": 0.01,
+    "threshold": 0.5,
+    "initial_weights": null,
+    "use_class_weighting": true,
+    "loss_version": "inverse_frequency_weighted_bce_v1",
+    "class_counts": [
+      1198,
+      3448
+    ],
+    "class_weights": [
+      1.9390651085141903,
+      0.673723897911833
+    ]
+  },
+  "source_fingerprint": "1b2659478762a3b10383240e87ad8edbec2b94facec6f77cad242653bbbc2a46",
+  "augmentation_plan_sha256": "ea2ce0de03f642618bd15960fbcc43cc2fba3480853b377c4412d0febd3cb35e",
+  "augmentation_assignment": "same existing fixed plan across seeds",
+  "std_ddof": 1
+}

@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "batch": 32,
+  "precision": "FP32",
+  "loss": 2.748260021209717,
+  "parameters": 229544,
+  "trainable_parameters": 229544,
+  "conv_linear_macs": 4433150464,
+  "conv_linear_flops": 8866300928,
+  "context_counted_flops": 850984960
+}

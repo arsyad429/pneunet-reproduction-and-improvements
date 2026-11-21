@@ -1,0 +1,56 @@
+{
+  "model": "RAD_DINO",
+  "status": "TRAINED",
+  "seed": 42,
+  "metadata": {
+    "repo_id": "microsoft/rad-dino",
+    "revision": "110cbc18d5133582e320b43d53bf5c44e410c936",
+    "weights_sha256": "dbfb9f54459c38773505de64a6ab7807bdcb392610fe1e697166342e43fb91ae",
+    "processor": {
+      "crop_size": {
+        "height": 518,
+        "width": 518
+      },
+      "do_center_crop": true,
+      "do_convert_rgb": true,
+      "do_normalize": true,
+      "do_rescale": true,
+      "do_resize": true,
+      "image_mean": [
+        0.5307,
+        0.5307,
+        0.5307
+      ],
+      "image_processor_type": "BitImageProcessor",
+      "image_std": [
+        0.2583,
+        0.2583,
+        0.2583
+      ],
+      "resample": 3,
+      "rescale_factor": 0.00392156862745098,
+      "size": {
+        "shortest_edge": 518
+      }
+    },
+    "geometry_override": "do_resize=False; do_center_crop=False; fixed shared 224 letterbox",
+    "gradient_checkpointing": false,
+    "binary_head": "new CLS-token Linear(hidden_size,1)",
+    "patch_size": 14,
+    "patch_grid": [
+      16,
+      16
+    ],
+    "register_tokens": 0,
+    "parameters_total": 86581249,
+    "parameters_trainable": 86581249
+  },
+  "updates": 1168,
+  "epochs": 8,
+  "training_seconds": 976.379037248902,
+  "resumed_after_epoch": 0,
+  "protocol_sha256": "e252b88a2ee0ea9debcc8e33f99ad23b69921a6a50e8df9e9cb55373f8864dea",
+  "peak_allocated_gib": 6.3190226554870605,
+  "peak_reserved_gib": 6.845703125,
+  "free_gib": 41.4527587890625
+}

@@ -1,0 +1,9 @@
+experiment_id,seed,split,source_index,target_layer,target_class,padding_cam_ratio,probability_pneumonia
+unet_resnet34__crop_mask__P3,42,test,5232,aspp_fuse.relu,0,1.2270324987184722e-06,0.005391978658735752
+unet_resnet34__crop_mask__P3,42,test,5232,context_refine.1.relu_out,0,0.0,0.005391978658735752
+unet_resnet34__crop_mask__P3,42,test,5233,aspp_fuse.relu,0,0.02376137301325798,0.001258254051208496
+unet_resnet34__crop_mask__P3,42,test,5233,context_refine.1.relu_out,0,0.0,0.001258254051208496
+unet_resnet34__crop_mask__P3,42,test,5466,aspp_fuse.relu,1,0.09016098827123642,0.996329128742218
+unet_resnet34__crop_mask__P3,42,test,5466,context_refine.1.relu_out,1,0.025834467262029648,0.996329128742218
+unet_resnet34__crop_mask__P3,42,test,5467,aspp_fuse.relu,1,0.09540192037820816,0.9367240071296692
+unet_resnet34__crop_mask__P3,42,test,5467,context_refine.1.relu_out,1,0.0322156697511673,0.9367240071296692

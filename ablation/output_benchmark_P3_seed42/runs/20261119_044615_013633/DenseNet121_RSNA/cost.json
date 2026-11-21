@@ -1,0 +1,29 @@
+{
+  "model": "DenseNet121_RSNA",
+  "weights_id": "densenet121-res224-rsna",
+  "weights_url": "https://github.com/mlmed/torchxrayvision/releases/download/v1/kaggle-densenet121-d121-tw-lr001-rot45-tr15-sc15-seed0-best.pt",
+  "binary_head": "new Linear(1024,1); original pathology classifier discarded",
+  "normalization": "(raw255/255*2-1)*1024",
+  "weights_sha256": "906a59f48cf09638b745d66848a6c6f9d741368c66244717a81207329d140268",
+  "parameters_total": 6948609,
+  "parameters_trainable": 6948609,
+  "evaluation_peak": {
+    "peak_allocated_gib": 0.3412594795227051,
+    "peak_reserved_gib": 0.455078125,
+    "free_gib": 47.8433837890625
+  },
+  "latency_batch1": {
+    "batch": 1,
+    "mean_ms_per_batch": 95.27182445526122,
+    "std_ms_per_batch": 18.759313848199334,
+    "mean_ms_per_image": 95.27182445526122,
+    "includes": "checkpoint normalization + model; excludes mask/CLAHE/disk read and host transfer"
+  },
+  "latency_batch32": {
+    "batch": 32,
+    "mean_ms_per_batch": 92.61462154388428,
+    "std_ms_per_batch": 32.97921160663871,
+    "mean_ms_per_image": 2.894206923246384,
+    "includes": "checkpoint normalization + model; excludes mask/CLAHE/disk read and host transfer"
+  }
+}

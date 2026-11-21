@@ -1,0 +1,224 @@
+{
+  "model": "PneuNet",
+  "condition": "aug_only",
+  "mode": "full",
+  "framework": "pytorch",
+  "architecture_version": "pneunet_E5_factorial_2x2_normalized_v1",
+  "torch": "2.8.0+cu126",
+  "torchvision": "0.23.0+cu126",
+  "python": "/home/arsyadmuhammad/AI Project/Pneumonia/.venv/bin/python",
+  "device": "cuda:0",
+  "gpu": "NVIDIA A100-SXM4-80GB",
+  "cuda_build": "12.6",
+  "precision": "float32",
+  "parameters": 785192,
+  "trainable_parameters": 785192,
+  "bn_running_statistics": 2560,
+  "keras_comparable_total": 787752,
+  "config": {
+    "use_class_weighting": true,
+    "loss_version": "inverse_frequency_weighted_bce_v1",
+    "seed": 42,
+    "image_size": 224,
+    "batch_size": 32,
+    "epochs": 50,
+    "learning_rate": 0.001,
+    "beta_1": 0.9,
+    "beta_2": 0.999,
+    "epsilon": 1e-07,
+    "dropout": 0.3,
+    "l2": 0.001,
+    "early_stopping_patience": 7,
+    "bn_eps": 0.001,
+    "bn_momentum": 0.01,
+    "threshold": 0.5,
+    "initial_weights": null,
+    "class_counts": [
+      1198,
+      3448
+    ],
+    "class_weights": [
+      1.9390651085141903,
+      0.673723897911833
+    ],
+    "class_weight_source": "complete_training_split_only",
+    "class_weighting": "inverse_frequency_balanced",
+    "loss_reduction": "mean_over_samples"
+  },
+  "effective_batch_size": 32,
+  "physical_batch_size": 32,
+  "gradient_accumulation_steps": 1,
+  "effective_epochs": 50,
+  "training_samples": 4646,
+  "validation_samples": 586,
+  "initial_weight_sha256": "0a7c8a46ab90039763c8c27520a6e92b1b9b4242f282e39791933b7739ef8406",
+  "test_evaluated": true,
+  "purpose": "performance_evaluation",
+  "reproduction_notes": {
+    "architecture": "E5 fixed for factorial 2x2 CLAHE-by-Augmentation",
+    "data": "all input /255, CLAHE before letterbox, train-only static 50/25/25 augmentation (E0-E6 protocol)",
+    "training": "physical batch32, FP32 Adam, same weighted BCE and explicit Conv/Linear L2 as SE source",
+    "test": "clean eval for rotation/blur; separate frozen-checkpoint input diagnostic",
+    "clinical_validation": false
+  },
+  "loss_version": "inverse_frequency_weighted_bce_v1",
+  "class_weights": [
+    1.9390651085141903,
+    0.673723897911833
+  ],
+  "class_counts": [
+    1198,
+    3448
+  ],
+  "class_weight_source": "complete_training_split_only",
+  "stage_shapes_NCHW": {
+    "input": [
+      1,
+      1,
+      224,
+      224
+    ],
+    "gray_to_rgb": [
+      1,
+      3,
+      224,
+      224
+    ],
+    "stem.relu": [
+      1,
+      32,
+      224,
+      224
+    ],
+    "detail_refine": [
+      1,
+      32,
+      224,
+      224
+    ],
+    "pointwise_branch0.relu": [
+      1,
+      32,
+      224,
+      224
+    ],
+    "depthwise_branches.0.se": [
+      1,
+      32,
+      224,
+      224
+    ],
+    "depthwise_branches.1.se": [
+      1,
+      32,
+      224,
+      224
+    ],
+    "depthwise_branches.2.se": [
+      1,
+      32,
+      224,
+      224
+    ],
+    "feature_concat": [
+      1,
+      128,
+      224,
+      224
+    ],
+    "bottleneck_fusion": [
+      1,
+      128,
+      224,
+      224
+    ],
+    "downsample.0.relu": [
+      1,
+      128,
+      112,
+      112
+    ],
+    "aspp_fuse.relu": [
+      1,
+      128,
+      112,
+      112
+    ],
+    "context_refine": [
+      1,
+      128,
+      112,
+      112
+    ],
+    "learnable_pooling": [
+      1,
+      128
+    ],
+    "classifier": [
+      1,
+      1
+    ]
+  },
+  "experiment": "E5",
+  "architecture_flags": {
+    "detail": true,
+    "fusion": false,
+    "context": true,
+    "normalized": true
+  },
+  "dataset_fingerprint": "aa5086a7b1356909605745377b82eda4d867d74aa9c89095046c6531ec17999a",
+  "data_condition_label": "C \u2014 Augmentation only /255",
+  "normalization_applied": true,
+  "clahe_applied": false,
+  "augmentation_fraction_train": 0.5,
+  "augmentation_assignment": "/home/arsyadmuhammad/AI Project/Pneumonia/output_pneunet_e5_factorial_2x2/notebook_reports/report_20261115_103533_431104/augmentation_assignment.csv",
+  "main_test_augmented": false,
+  "seconds": 8109.0009970092215,
+  "epochs_completed": 19,
+  "optimizer_updates": 2774,
+  "best_epoch": 12,
+  "gpu_peak_allocated_mb": 12060.63720703125,
+  "train_metrics": {
+    "accuracy": 0.9616874730951356,
+    "precision_pneumonia": 0.9684813753581661,
+    "recall_pneumonia": 0.9802784222737819,
+    "f1_pneumonia": 0.9743441914096281,
+    "precision_normal": 0.9411764705882353,
+    "recall_normal": 0.9081803005008348,
+    "f1_normal": 0.9243840271877655,
+    "macro_f1": 0.9493641092986969,
+    "roc_auc": 0.9916987515929487,
+    "pr_auc": 0.9970493989602252,
+    "samples": 4646,
+    "threshold": 0.5
+  },
+  "val_metrics": {
+    "accuracy": 0.9556313993174061,
+    "precision_pneumonia": 0.9616252821670429,
+    "recall_pneumonia": 0.9793103448275862,
+    "f1_pneumonia": 0.9703872437357631,
+    "precision_normal": 0.9370629370629371,
+    "recall_normal": 0.8874172185430463,
+    "f1_normal": 0.9115646258503401,
+    "macro_f1": 0.9409759347930516,
+    "roc_auc": 0.9903630965973966,
+    "pr_auc": 0.9965733416247969,
+    "samples": 586,
+    "threshold": 0.5
+  },
+  "test_metrics": {
+    "accuracy": 0.8798076923076923,
+    "precision_pneumonia": 0.8461538461538461,
+    "recall_pneumonia": 0.9871794871794872,
+    "f1_pneumonia": 0.9112426035502958,
+    "precision_normal": 0.9704142011834319,
+    "recall_normal": 0.7008547008547008,
+    "f1_normal": 0.8138957816377171,
+    "macro_f1": 0.8625691925940064,
+    "roc_auc": 0.9714990138067061,
+    "pr_auc": 0.978906383676815,
+    "samples": 624,
+    "threshold": 0.5
+  },
+  "status": "COMPLETE"
+}

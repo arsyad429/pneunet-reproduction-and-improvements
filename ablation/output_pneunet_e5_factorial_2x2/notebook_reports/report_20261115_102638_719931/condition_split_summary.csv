@@ -1,0 +1,13 @@
+condition,split,samples,NORMAL,PNEUMONIA,augmented,rotated,gaussian_blurred,original,intensity_range,clahe,augmentation,preprocessing
+baseline,train,4646,1198,3448,0,0,0,4646,"[0,1]",False,False,A — Baseline /255
+baseline,val,586,151,435,0,0,0,586,"[0,1]",False,False,A — Baseline /255
+baseline,test,624,234,390,0,0,0,624,"[0,1]",False,False,A — Baseline /255
+clahe_only,train,4646,1198,3448,0,0,0,4646,"[0,1]",True,False,B — CLAHE only /255
+clahe_only,val,586,151,435,0,0,0,586,"[0,1]",True,False,B — CLAHE only /255
+clahe_only,test,624,234,390,0,0,0,624,"[0,1]",True,False,B — CLAHE only /255
+aug_only,train,4646,1198,3448,2323,1162,1161,2323,"[0,1]",False,True,C — Augmentation only /255
+aug_only,val,586,151,435,0,0,0,586,"[0,1]",False,True,C — Augmentation only /255
+aug_only,test,624,234,390,0,0,0,624,"[0,1]",False,True,C — Augmentation only /255
+clahe_aug,train,4646,1198,3448,2323,1162,1161,2323,"[0,1]",True,True,D — CLAHE + Augmentation /255
+clahe_aug,val,586,151,435,0,0,0,586,"[0,1]",True,True,D — CLAHE + Augmentation /255
+clahe_aug,test,624,234,390,0,0,0,624,"[0,1]",True,True,D — CLAHE + Augmentation /255

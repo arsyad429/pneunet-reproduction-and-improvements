@@ -1,0 +1,27 @@
+{
+  "NORMAL": {
+    "precision": 0.9698795180722891,
+    "recall": 0.688034188034188,
+    "f1-score": 0.805,
+    "support": 234.0
+  },
+  "PNEUMONIA": {
+    "precision": 0.8406113537117904,
+    "recall": 0.9871794871794872,
+    "f1-score": 0.9080188679245284,
+    "support": 390.0
+  },
+  "accuracy": 0.875,
+  "macro avg": {
+    "precision": 0.9052454358920398,
+    "recall": 0.8376068376068376,
+    "f1-score": 0.8565094339622642,
+    "support": 624.0
+  },
+  "weighted avg": {
+    "precision": 0.8890869153469774,
+    "recall": 0.875,
+    "f1-score": 0.8693867924528302,
+    "support": 624.0
+  }
+}

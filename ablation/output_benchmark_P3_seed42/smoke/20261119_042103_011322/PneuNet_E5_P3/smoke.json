@@ -1,0 +1,90 @@
+{
+  "model": "PneuNet_E5_P3",
+  "batch": 32,
+  "precision": "float32",
+  "amp": false,
+  "tf32": false,
+  "full_training": false,
+  "source_fingerprint": "1b2659478762a3b10383240e87ad8edbec2b94facec6f77cad242653bbbc2a46",
+  "hf_revisions": {
+    "RAD_DINO": "110cbc18d5133582e320b43d53bf5c44e410c936",
+    "DINOv3_ViTL16": "ea8dc2863c51be0a264bab82070e3e8836b02d51"
+  },
+  "memory_budget_gib": 40.0,
+  "gradient_checkpointing_requested": true,
+  "protocol_sha256": "e252b88a2ee0ea9debcc8e33f99ad23b69921a6a50e8df9e9cb55373f8864dea",
+  "checkpoint": "/home/arsyadmuhammad/AI Project/Pneumonia/output_pneunet_e5_segmentation_3level/runs/full/unet_resnet34__mask__P3__seed_42/best.pt",
+  "sha256": "18b5da5080189b819726a21ba3fe462b4937d797ecda416bfd3196bfe4485caf",
+  "retrained": false,
+  "parameters_total": 785192,
+  "parameters_trainable": 0,
+  "normalization_check": {
+    "status": "PASS",
+    "shape": [
+      2,
+      1,
+      224,
+      224
+    ],
+    "geometry_changed": false
+  },
+  "reference_probability_max_abs_error": 7.038879368259643e-09,
+  "peak_allocated_gib": 11.445620059967041,
+  "peak_reserved_gib": 12.65234375,
+  "free_gib": 35.2242431640625,
+  "status": "PASS",
+  "loss": 0.11208756268024445,
+  "optimizer_updates": 0,
+  "attribution_checks": [
+    {
+      "method": "Grad-CAM",
+      "feature_shape": [
+        1,
+        128,
+        112,
+        112
+      ],
+      "zero_heatmap": false,
+      "target_class": 0,
+      "normalization": "per-image relative [0,1]"
+    },
+    {
+      "method": "Grad-CAM",
+      "feature_shape": [
+        1,
+        128,
+        112,
+        112
+      ],
+      "zero_heatmap": false,
+      "target_class": 1,
+      "normalization": "per-image relative [0,1]"
+    }
+  ],
+  "attribution_check": {
+    "method": "Grad-CAM",
+    "feature_shape": [
+      1,
+      128,
+      112,
+      112
+    ],
+    "zero_heatmap": false,
+    "target_class": 1,
+    "normalization": "per-image relative [0,1]"
+  },
+  "latency_batch1": {
+    "batch": 1,
+    "mean_ms_per_batch": 26.118252646923064,
+    "std_ms_per_batch": 34.816122125977984,
+    "mean_ms_per_image": 26.118252646923064,
+    "includes": "checkpoint normalization + model; excludes mask/CLAHE/disk read and host transfer"
+  },
+  "latency_batch32": {
+    "batch": 32,
+    "mean_ms_per_batch": 110.74443168640137,
+    "std_ms_per_batch": 53.960795404506314,
+    "mean_ms_per_image": 3.460763490200043,
+    "includes": "checkpoint normalization + model; excludes mask/CLAHE/disk read and host transfer"
+  }
+}
